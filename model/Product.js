@@ -1,5 +1,7 @@
 //*******************************/
 //Configurando models (schema)
+//Esse arquivo está sendo "require" no index.js
+
 const mongoose=require('mongoose')
 
 const Produto = mongoose.model('produtos', {

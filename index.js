@@ -16,6 +16,7 @@ app.use(express.json())
 
 //**************************/
 //Configurando/Conectando Mongoose
+
 const DB_USER = process.env.DB_USER
 const DB_PASS = encodeURIComponent(process.env.DB_PASS)
 
@@ -24,11 +25,13 @@ const Usuario = require('./model/User')
 const Pedido = require('./model/Order')
 
 mongoose
-    .connect('')
+    .connect(`mongodb+srv://${DB_USER}:${DB_PASS}@cluster0.bodoj94.mongodb.net/?retryWrites=true&w=majority`)
     .then(()=>{
         console.log('conectado ao MongoDB')
     })
-    .catch((err)=>console.log(err))
+    .catch((err)=> {
+        console.log("Houve um erro ao se conectar ao mongoDB: "+err)
+    })
 
 //**************************/
     //Configurando Rotas
