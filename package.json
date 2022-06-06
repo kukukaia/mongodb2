@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devStart": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kukukaia/mongodb2.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {

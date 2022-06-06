@@ -2,7 +2,8 @@ GET http://localhost:3005/posts
 
 ###
 
-POST http://localhost:3005/login Content-Type: application/json
+POST http://localhost:3005/login 
+Content-Type: application/json
 
 {
     "username": "Lilian"
