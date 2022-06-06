@@ -1,0 +1,5 @@
+POST http://localhost:3005/produto/incluir Content-Type: application/json
+
+{
+"img": "./img/product.png", "codBarra": "867900567894", "nomeItem": "camiseta2040-", "tamanhoItem": "M", "precoItem": 39.90, "estoque": 3, "qtd": 0
+}
