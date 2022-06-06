@@ -29,9 +29,8 @@ mongoose
     .then(()=>{
         console.log('conectado ao MongoDB')
     })
-    .catch((err)=> {
-        console.log("Houve um erro ao se conectar ao mongoDB: "+err)
-    })
+    .catch((err)=>console.log(err))
+        //console.log("Houve um erro ao se conectar ao mongoDB: "+err)
 
 //**************************/
     //Configurando Rotas
@@ -58,7 +57,7 @@ mongoose
             res.status(201).json(novoProduto)
             
         }catch(err){
-            res.status(500).json({msg:'Falha na inclusão: '+er})
+            res.status(500).json({msg:'Falha na inclusão: '+err})
             return
         }
     })
@@ -107,4 +106,5 @@ app.get('/pedidos/listar',async(req,res)=>{
 //*************************************/
 //Inicializando o serviço
 app.listen(process.env.PORT, console.log('serviço ativo - http://localhost:'+process.env.PORT))
+
 
