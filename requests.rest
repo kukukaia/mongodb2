@@ -1,10 +1,22 @@
-GET http://localhost:3005/posts
-
-###
-
-POST http://localhost:3005/login 
+POST http://localhost:3005/produtos/incluir 
 Content-Type: application/json
 
 {
-    "username": "Lilian"
+    "img": "./img/product.png", "codBarra": "867900567894", "nomeItem": "camiseta2040-", "tamanhoItem": "M", "precoItem": 39.90, "estoque": 3, "qtd": 0
 }
+
+###
+
+DELETE http://localhost:3005/produtos/excluir 
+
+Content-Type: application/json
+
+{
+    "_id":"629ee1a1ba5ae1dfc9936743"
+}
+
+###
+
+GET http://localhost:3005/produtos/incluir 
+
+Content-Type: application/json
