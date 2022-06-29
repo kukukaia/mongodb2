@@ -1,8 +1,8 @@
 //**************************/
 //Configurando models (schema)
-const mongoose=require('mongoose')
+const mongoose = require('mongoose')
 
-const Order = mongoose.model('pedidos', {
+const Order = mongoose.model('pedidos',{
     usrId: String,
     itemsId: []
 })

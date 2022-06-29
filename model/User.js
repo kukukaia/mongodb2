@@ -1,8 +1,8 @@
 //***********************************/
 //Configurando models (schema)
-const mongoose=require('mongoose')
+const mongoose = require('mongoose')
 
-const User = mongoose.model('usuarios', {
+const User = mongoose.model('usuarios',{
     img: String,
     nome: String,
     email: String,

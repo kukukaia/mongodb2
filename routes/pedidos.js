@@ -18,8 +18,8 @@ router.use(express.json())
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //Importanto models
-const Produto = require('../model/Product')
-const Usuario = require('../model/User')
+//const Produto = require('../model/Product')
+//const Usuario = require('../model/User')
 const Pedido = require('../model/Order')
 
 
@@ -35,7 +35,7 @@ router.get('/incluir',async (req,res)=>{
 })
 
 router.get('/listar', async(req,res)=>{
-    let pedidos=[]
+    let pedidos = []
     pedidos = await Pedido.find()
     res.json(pedidos)
     return

@@ -19,7 +19,7 @@ router.use(express.json())
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //Importanto models
 const Produto = require('../model/Product')
-const Usuario = require('../model/User')
+//const Usuario = require('../model/User')
 //const Pedido = require('-./model/Order')
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -67,7 +67,7 @@ router.post('/incluir',async (req,res)=>{
 //Rota listar
 router.get('/listar',async(req,res)=>{
     console.log('Acesso na rota Produtos/listar')
-    let produtos=[]
+    let produtos = []
     produtos = await Produto.find()
     res.json(produtos)
     return
@@ -75,8 +75,8 @@ router.get('/listar',async(req,res)=>{
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 router.delete('/excluir',async (req,res)=>{
-    const id =req.body._id
-    let produtos=[]
+    const id = req.body._id
+    let produtos = []
     produtos = await Produto.findOneAndDelete({_id:id})
     res.json(produtos)
     return
